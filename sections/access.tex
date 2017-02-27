@@ -1,0 +1,44 @@
+\section{Accessing the cluster}
+
+The cluster is located at Parallel and Distributed System Lab (PDSL), School of Computer Science and Engineering. Among the cluster nodes, compute0 serves as the login node for users to login to the system. To login, connect to the IP address 155.69.145.181 with SSH. For example
+
+\begin{lstlisting}
+$ ssh <username>@155.69.145.181
+\end{lstlisting}
+
+\noindent After logging in, all cluster nodes can be access with SSH. For example
+
+\begin{lstlisting}
+$ ssh <username>@<nodename>
+\end{lstlisting}
+
+\noindent Currently, the cluster has the following nodes
+
+\begin{itemize}
+    \item compute0
+    \item compute1
+    \item compute2
+    \item compute3
+\end{itemize}
+
+\subsection{Changing password}
+
+Upon successful login, it's the user's responsibility to change his/her password. To change password
+
+\begin{lstlisting}
+$ yppasswd
+\end{lstlisting}
+
+\subsection{Changing shell}
+
+By default, your login shell is BASH. If you prefer to use other shell, change the shell with
+
+\begin{lstlisting}
+$ ypchsh -s /path/to/your/shell
+\end{lstlisting}
+
+\noindent For example, to change default shell to ZSH
+
+\begin{lstlisting}
+$ ypchsh -s /bin/zsh
+\end{lstlisting}

@@ -1,0 +1,10 @@
+\section{Data storage}
+
+To support data sharing among multiple cluster nodes for running dsitributed applications, a Network File System (NFS) has been setup. Currently, the following folders are shared across all cluster nodes
+
+\begin{itemize}
+    \item /opt (for sharing software packages, etc.)
+    \item /home (for sharing user data)
+\end{itemize}
+
+\noindent If you are working on your own, you could store all data in your home directory \lstinline{/home/<username>}. If you are collaborating with others on an application, contact the administrators to create a folder in \lstinline{/home/public} which could be shared among multiple users.

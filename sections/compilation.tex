@@ -1,0 +1,41 @@
+\section{Compiling application}
+
+The NTU HPC cluster employs the Lmod system to manage the compilers and libraries. This system allows users to easily load a package, switch between different versions of a package, and unload a package. These features are implemented by smartly user's environment variables (e.g. \lstinline{PATH}, and \lstinline{LD_LIBRARY_PATH}) under the hood. The changes are only effective for users' current session.
+
+\subsection{Basic Lmod commands}
+
+To check what are the available package, use
+
+\begin{lstlisting}
+$ module av
+\end{lstlisting}
+
+\noindent To load a package, use
+
+\begin{lstlisting}
+$ module load <packagename>
+\end{lstlisting}
+
+\noindent The above command will load the default version for that package (marked with \lstinline{(D)}), to load a specific version, use
+
+\begin{lstlisting}
+$ module load <packagename>/<version>
+\end{lstlisting}
+
+\noindent To switch the version of a package after it has been loaded, use the above command with the version you want. To check what modules are loaded, use
+
+\begin{lstlisting}
+$ module list
+\end{lstlisting}
+
+\noindent To unload a module after use, use
+
+\begin{lstlisting}
+$ module unload <packagename>
+\end{lstlisting}
+
+\noindent To unload all loaded modules at once, use
+
+\begin{lstlisting}
+$ module purge
+\end{lstlisting}
